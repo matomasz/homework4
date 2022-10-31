@@ -26,6 +26,18 @@ header {
 }
 
 
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+
+#logo {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+
 @media all and (min-width: 700px){
     header img {
         width: 400px;
@@ -43,7 +55,7 @@ header {
     }
 
     .card, .gallery img {
-        flex-basis: 300px; /* I can't tel if I am supposed to be using this (flex-basis)
+        flex-basis: 300px; /* I can't tell if I am supposed to be using this (flex-basis),
                             but I can not achieve the desired result with it */
         width: 300px;
         height: auto;
@@ -56,3 +68,19 @@ header {
     }
 
 }
+
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+      scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    .skip a{
+      -webkit-transition: none;
+      transition: none;
+    }
+
+    #logo {
+        animation-duration: 0s;
+    }
+  }
