@@ -19,6 +19,11 @@ header {
     align-items: center;
 }
 
+.card, .gallery img {
+    width: 100%;
+    height: auto;
+}
+
 .nav_links {
     display: flex;
     flex-direction: column;
