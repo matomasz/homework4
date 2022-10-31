@@ -1,0 +1,58 @@
+body {
+    font-family: 'Poppins', 'sans-serif';
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing, .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+}
+
+
+@media all and (min-width: 700px){
+    header img {
+        width: 400px;
+        height: auto;
+    }
+
+    .nav_links, .pricing, .gallery {
+        flex-direction: row;
+    }
+    
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card, .gallery img {
+        flex-basis: 300px; /* I can't tel if I am supposed to be using this (flex-basis)
+                            but I can not achieve the desired result with it */
+        width: 300px;
+        height: auto;
+    }
+
+    .pricing, .gallery {
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
